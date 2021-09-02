@@ -1,0 +1,11 @@
+Fiz modificações no codigo. Eu ainda estou tentando implementar aquivos, mas ele já funciona perfeitamente msmo serm arquivos. Todos os erros foram corrigidos. 
+Modifiquei os metodos: Cliente,  Moderador, NotaFiscal e a Main.
+Eu tirei o hashmap de cliente, até pq não faz sentido um hashmap para armazenar os clientes dentro de um objeto cliente. O hash que vai salvar os clientes esta na principal. 
+Eu consetei o bug da função gerarBoleto. Basicamente quando chamava a função "fazerPedido", estava passando um objeto nota que era null. Dai dava erro na função de entrega. 
+Eu criei um arryList dentro de notaFiscal para armazenar a lista de pedidos dele. Criei um ArreyList do tipo notaFiscal dentro de cliente para armazenar todas as notas fiscais daqueles cliente, ou seja, uma forma de historico de compras. 
+Modifiquei a função criarConta. Agora o if que verifica se uma determinada senha já existe usa o map que esta na main.
+Na login moderador eu coloquei para verificar se a senha digitada é igual a "123". Como só vai ter um moderador, podemos verificar uma senha padrão.
+Na fazerPedido eu adicionei uma variável float "Preço". A cada escolha que ele faz, a varial é aumentada. Por exe se ele escolher maça, o preço aumenta em mais 0,5. Ao final soma com o preço do frete.
+A função do moderador mostrarContas esta feita. Não consegui fazer a função de remover, pois eu precisava de um codigo e esse código tinhaque ser a senha do cara. Mas o moderador não pode saber a senha. Eu pensei em por outra forma de identificação que não fosse a senha. Vou fazer isso mais tarde.
+Implementei o sistema de arquivos. Precisava implementar a interface serialized na classe cliente. 
+Só tem um pequeno problema. Na hora de remover, o mod remove o cliente do hashmap e não do arquivo. Quando for fazer login, o hash vai ser atualizado e o cliente removido volta para ele. Esse é o utimo bug.
